@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ahmedsalah Exploit Host</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #00ffcc;
+    }
+    .button {
+      background-color: #00ffcc;
+      border: none;
+      color: #111;
+      padding: 15px 30px;
+      margin: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #00ddb3;
+    }
+  </style>
+</head>
+<body>
+  <h1>ahmedsalah Exploit Host - PS4 9.00</h1>
+  <p>Welcome! Choose a payload to launch:</p>
+
+  <button class="button" onclick="loadGoldHen()">Load GoldHen 2.3</button>
+  <button class="button" onclick="loadBinLoader()">Start BinLoader</button>
+
+  <script>
+    function loadGoldHen() {
+      fetch('payloads/goldhen_2.3.bin')
+        .then(res => res.arrayBuffer())
+        .then(payload => {
+          alert("Payload ready. Inject using exploit.");
+        })
+        .catch(() => alert("Failed to load payload."));
+    }
+
+    function loadBinLoader() {
+      alert("BinLoader is now listening. Send your .bin payload from PC to port 9020.");
+    }
+  </script>
+</body>
+</html>
